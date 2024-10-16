@@ -1,19 +1,21 @@
-// TelehealthSession.jsx
 import React, { useState } from 'react';
-import { Box } from '@mui/material';
+import { Box, TextField, Button, Typography } from '@mui/material';
 import Layout from './Layout';
 import ConfirmationPage from './ConfirmationPage';
-import AppointmentForm from './AppointmentForm';
-
-// IMPORTANT NOTE
-// Code required
 
 const TelehealthSession = () => {
+  const [sessionCode, setSessionCode] = useState('');
   const [isConnecting, setIsConnecting] = useState(false);
+  const [error, setError] = useState('');
 
-  const handleSubmit = (formData) => {
-    setIsConnecting(true);
-    // You can process the form data or trigger other actions here
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (!sessionCode) {
+      setError('Please enter your session code.');
+      return;
+    }
+    // Normally you would validate the code here
+    setIsConnecting(true); // Simulate the connection process
   };
 
   return (
@@ -22,7 +24,33 @@ const TelehealthSession = () => {
         {isConnecting ? (
           <ConfirmationPage />
         ) : (
-          <AppointmentForm onSubmit={handleSubmit} />
+          <Box>
+            <Typography variant="h4" color="primary" gutterBottom textAlign="center">
+              Enter Telehealth Session Code
+            </Typography>
+            <form onSubmit={handleSubmit} noValidate>
+              <TextField
+                label="Session Code"
+                name="sessionCode"
+                value={sessionCode}
+                onChange={(e) => setSessionCode(e.target.value)}
+                fullWidth
+                required
+                margin="normal"
+                error={Boolean(error)}
+                helperText={error}
+              />
+              <Button
+                variant="contained"
+                color="primary"
+                type="submit"
+                fullWidth
+                sx={{ mt: 2, fontSize: 18, py: 2 }}
+              >
+                Connect to Session
+              </Button>
+            </form>
+          </Box>
         )}
       </Box>
     </Layout>

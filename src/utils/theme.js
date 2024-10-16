@@ -1,4 +1,3 @@
-// theme.js
 import { createTheme } from "@mui/material/styles";
 
 const theme = createTheme({
@@ -61,20 +60,15 @@ const theme = createTheme({
     MuiButton: {
       styleOverrides: {
         root: {
-          // Global button styles
           height: '48px', // Button height as per guidelines
           borderRadius: '8px', // Rounded corners
           textTransform: 'none', // Disable uppercase text
           fontWeight: 700, // Consistent button font weight
           fontSize: '1rem',
           padding: '0 16px', // Padding inside buttons for better touch target
-          
-          // Hover state with underline for accessibility
           '&:hover': {
             textDecoration: 'underline',
           },
-          
-          // Focus state (global focus outline as per WCAG)
           '&:focus': {
             outline: '2px solid #09549F', // Focus outline
           },
@@ -87,46 +81,34 @@ const theme = createTheme({
         },
         containedSecondary: {
           backgroundColor: '#FFCC2C', // Secondary button color
-          borderColor: '#FFCC2C', // Secondary button border
           '&:hover': {
-            backgroundColor: '#E6B800', // Darker secondary on hover
+            backgroundColor: '#E6B800', // Darker on hover
           },
         },
-        outlined: {
-          borderWidth: '2px', // Ensuring outlined buttons have a clear border
-          borderColor: '#09549F', // Primary border color for outlined buttons
-          '&:hover': {
-            textDecoration: 'underline',
-            borderColor: '#05325F', // Darker outline on hover
+      },
+    },
+    // Add the MuiSelect overrides to fix the dropdown issue
+    MuiSelect: {
+      styleOverrides: {
+        root: {
+          '&:focus': {
+            backgroundColor: 'transparent', // Removes the highlight/focus color
           },
         },
-        outlinedSecondary: {
-          borderWidth: '2px',
-          borderColor: '#FFCC2C',
-          '&:hover': {
-            borderColor: '#E6B800',
-            textDecoration: 'underline',
+      },
+    },
+    MuiOutlinedInput: {
+      styleOverrides: {
+        root: {
+          '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
+            borderColor: '#09549F', // Ensure the border color is consistent with the primary theme
+          },
+          '&:hover .MuiOutlinedInput-notchedOutline': {
+            borderColor: '#09549F',
           },
         },
-        iconLead: {
-          // Leading icon styles (place icon before text)
-          display: 'inline-flex',
-          justifyContent: 'flex-start',
-          '& i': {
-            marginRight: '8px',
-          },
-        },
-        iconTrail: {
-          // Trailing icon styles (place icon after text)
-          display: 'inline-flex',
-          justifyContent: 'flex-start',
-          '& i': {
-            marginLeft: '8px',
-          },
-        },
-        disabled: {
-          color: '#C4C4C4', // Disabled text color
-          backgroundColor: '#F0F0F0', // Disabled background color
+        notchedOutline: {
+          borderColor: '#09549F', // Primary color for dropdown border
         },
       },
     },
