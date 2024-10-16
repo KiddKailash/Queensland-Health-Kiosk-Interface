@@ -30,11 +30,7 @@ const Header = () => {
         sx={{
           height: { xs: 40, sm: 50 },
           marginRight: 2,
-          cursor: "pointer",
-          transition: "transform 0.3s",
-          "&:hover": {
-            transform: "scale(1.05)",
-          }
+
         }}
       />
 
