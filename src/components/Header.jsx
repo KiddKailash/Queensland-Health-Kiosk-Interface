@@ -67,12 +67,15 @@ const Header = () => {
             fontSize: { xs: "0.9rem", sm: "1rem" },
             borderRadius: "4px", // Slight rounding for modern, accessible design
             borderColor: "#09549F", // Sapphire blue border
+            textDecoration: "none", // Ensure no text decoration
             "&:hover": {
               backgroundColor: "#F0F4F9", // Light blue hover background for outlined buttons
               borderColor: "#05325F", // Darker blue on hover
+              textDecoration: "none", // Disable underline on hover
             },
             "&:focus": {
               outline: "2px solid #FFCC2C", // Golden yellow focus outline for accessibility
+              textDecoration: "none", // Disable underline on focus
             }
           }}
         >

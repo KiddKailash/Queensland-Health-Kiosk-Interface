@@ -66,9 +66,6 @@ const theme = createTheme({
           fontWeight: 700, // Consistent button font weight
           fontSize: '1rem',
           padding: '0 16px', // Padding inside buttons for better touch target
-          '&:hover': {
-            textDecoration: 'underline',
-          },
           '&:focus': {
             outline: '2px solid #09549F', // Focus outline
           },
