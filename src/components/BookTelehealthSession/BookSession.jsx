@@ -21,8 +21,8 @@ const ScheduleForm = () => {
 
   const availablePractitioners = [
     { value: "GP", label: "General Practitioner" },
-    { value: "Specialist", label: "Specialist" },
     { value: "Psychologist", label: "Psychologist" },
+    { value: "Pharmacist", label: "Pharmacist" },
   ];
 
   const availableSlots = {
@@ -31,7 +31,7 @@ const ScheduleForm = () => {
       { value: "11:00 AM", label: "11:00 AM" },
       { value: "2:00 PM", label: "2:00 PM" },
     ],
-    Specialist: [
+    Pharmacist: [
       { value: "12:00 PM", label: "12:00 PM" },
       { value: "3:00 PM", label: "3:00 PM" },
     ],
