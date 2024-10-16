@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
-import { Typography, Box, Button, Card, CardContent } from "@mui/material";
+import { Typography, Box, Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 
 const BookingConfirmed = ({ appointmentData }) => {
