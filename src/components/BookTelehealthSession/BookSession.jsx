@@ -1,18 +1,18 @@
 import React, { useState } from "react";
 import { Button, Typography, TextField, Box, Divider } from "@mui/material";
-import Layout from "./Layout";
+import Layout from "../Layout";
 import BookingConfirmed from "./BookingConfirmed";
-import UserSelect from "./UserSelect"; // Import the new dropdown component
+import UserSelect from "../UserSelect";
 
 const ScheduleForm = () => {
   const [appointmentData, setAppointmentData] = useState({
     name: "",
     dob: "",
-    date: "", // Field for date
+    date: "", 
     time: "",
-    address: "", // Field for mailing address
-    practitionerType: "", // Field for practitioner type
-    comments: "", // Field for comments
+    address: "", 
+    practitionerType: "", 
+    comments: "", 
   });
 
   const [availableTimes, setAvailableTimes] = useState([]);

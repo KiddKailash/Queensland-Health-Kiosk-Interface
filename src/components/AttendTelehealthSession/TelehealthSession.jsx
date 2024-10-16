@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Box, TextField, Button, Typography } from '@mui/material';
-import Layout from './Layout';
-import ConfirmationPage from './ConfirmationPage';
+import Layout from '../Layout';
+import ConfirmationPage from './WaitingPage';
 
 const TelehealthSession = () => {
   const [sessionCode, setSessionCode] = useState('');

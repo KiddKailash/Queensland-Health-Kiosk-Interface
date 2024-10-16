@@ -1,10 +1,10 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ThemeProvider, CssBaseline } from "@mui/material";
-import HomePage from "./components/HomePage";
-import TelehealthSession from "./components/TelehealthSession";
-import ScheduleForm from "./components/ScheduleForm";
-import HelpSupport from "./components/HelpSupport";
+import HomePage from "./components/HomePage/HomePage";
+import TelehealthSession from "./components/AttendTelehealthSession/TelehealthSession";
+import ScheduleForm from "./components/BookTelehealthSession/BookSession";
+import HelpSupport from "./components/HelpAndSupport/HelpSupport";
 import PageNotFound from './components/PageNotFound';
 import theme from "./utils/theme";  // Import the theme from the new file
 

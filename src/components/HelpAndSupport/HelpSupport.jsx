@@ -12,7 +12,7 @@ import {
 } from "@mui/material";
 import { ExpandMore } from "@mui/icons-material";
 import { useNavigate } from "react-router-dom";
-import Layout from "./Layout";
+import Layout from "../Layout";
 
 const HelpSupport = () => {
   const navigate = useNavigate();
