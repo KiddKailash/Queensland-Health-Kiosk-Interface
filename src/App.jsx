@@ -6,7 +6,7 @@ import TelehealthSession from "./components/AttendTelehealthSession/TelehealthSe
 import ScheduleForm from "./components/BookTelehealthSession/BookSession";
 import HelpSupport from "./components/HelpAndSupport/HelpSupport";
 import PageNotFound from './components/PageNotFound/PageNotFound';
-import theme from "./utils/theme";  // Import the theme from the new file
+import theme from "./utils/theme";
 
 function App() {
   return (
