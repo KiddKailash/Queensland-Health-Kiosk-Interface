@@ -48,38 +48,35 @@ const Header = () => {
           marginRight: 'auto'
         }}
       >
-        | TeleHealth Kiosk
+        | Telehealth Kiosk
       </Typography>
 
       {/* Conditionally display the Back button when not on the home page */}
       {location.pathname !== '/' && (
         <Button
-          variant="contained"
+          variant="outlined" // QGov buttons are usually outlined for secondary actions
           onClick={() => navigate("/")}
           startIcon={<ArrowBackIcon />} // Adds the back icon
           sx={{
-            background: "linear-gradient(to right, #ff9800, #ff5722)", // Gradient background
-            color: "#fff",
+            backgroundColor: "#FFFFFF", // QGov often uses a white background for outlined buttons
+            color: "#09549F", // Use the primary color (sapphire blue) for text and borders
             fontWeight: 'bold',
             textTransform: 'none',
             paddingX: { xs: 2, sm: 3 },
-            paddingY: { xs: 0.5, sm: 1 },
-            fontSize: { xs: "0.8rem", sm: "1rem" },
-            borderRadius: "20px", // More rounded button
-            transition: "all 0.3s ease",
-            boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.1)", // Subtle shadow
+            paddingY: { xs: 1, sm: 1.5 },
+            fontSize: { xs: "0.9rem", sm: "1rem" },
+            borderRadius: "4px", // Slight rounding for modern, accessible design
+            borderColor: "#09549F", // Sapphire blue border
             "&:hover": {
-              background: "linear-gradient(to right, #ff5722, #f44336)", // Darken on hover
-              transform: "scale(1.05)", // Slightly enlarge on hover
-              boxShadow: "0px 6px 16px rgba(0, 0, 0, 0.2)",
+              backgroundColor: "#F0F4F9", // Light blue hover background for outlined buttons
+              borderColor: "#05325F", // Darker blue on hover
             },
             "&:focus": {
-              outline: "none",
-              boxShadow: "0px 6px 16px rgba(0, 0, 0, 0.4)", // More pronounced shadow on focus
+              outline: "2px solid #FFCC2C", // Golden yellow focus outline for accessibility
             }
           }}
         >
-          Back
+          Home Screen
         </Button>
       )}
     </Box>

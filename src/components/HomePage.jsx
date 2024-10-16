@@ -19,7 +19,7 @@ const HomePage = () => {
           Welcome to the
         </Typography>
         <Typography variant="h1" color="primary" gutterBottom>
-          TeleHealth Kiosk
+          Telehealth Kiosk
         </Typography>
         <Typography variant="body1" gutterBottom color="text.primary" sx={{mb: 2}}>
           Access healthcare services easily and conveniently.

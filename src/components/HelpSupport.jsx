@@ -37,25 +37,25 @@ const HelpSupport = () => {
             Help and Support
           </Typography>
 
-          {/* Section: What is the TeleHealth Kiosk */}
+          {/* Section: What is the Telehealth Kiosk */}
           <Accordion>
             <AccordionSummary
               expandIcon={<ExpandMore />}
-              aria-controls="telehealth-kiosk-content"
-              id="telehealth-kiosk-header"
+              aria-controls="Telehealth-kiosk-content"
+              id="Telehealth-kiosk-header"
             >
               <Typography variant="h5" color="primary">
-                What is the TeleHealth Kiosk?
+                What is the Telehealth Kiosk?
               </Typography>
             </AccordionSummary>
             <AccordionDetails>
               <Typography variant="body1" color="text.primary">
-                The TeleHealth Kiosk allows rural residents to access healthcare via video consultations. You do not need internet or a device—just visit the kiosk to book or join a telehealth session.
+                The Telehealth Kiosk allows rural residents to access healthcare via video consultations. You do not need internet or a device—just visit the kiosk to book or join a Telehealth session.
               </Typography>
             </AccordionDetails>
           </Accordion>
 
-          {/* Section: How to Use the TeleHealth Kiosk */}
+          {/* Section: How to Use the Telehealth Kiosk */}
           <Accordion>
             <AccordionSummary
               expandIcon={<ExpandMore />}
@@ -68,7 +68,7 @@ const HelpSupport = () => {
             </AccordionSummary>
             <AccordionDetails>
               <Typography variant="body1" color="text.primary">
-                Follow these steps to use the TeleHealth Kiosk:
+                Follow these steps to use the Telehealth Kiosk:
               </Typography>
               <List disablePadding sx={{ mt: 1 }}>
                 {[
@@ -93,8 +93,8 @@ const HelpSupport = () => {
           <Accordion>
             <AccordionSummary
               expandIcon={<ExpandMore />}
-              aria-controls="why-telehealth-kiosk-content"
-              id="why-telehealth-kiosk-header"
+              aria-controls="why-Telehealth-kiosk-content"
+              id="why-Telehealth-kiosk-header"
             >
               <Typography variant="h5" color="primary">
                 Why Use the Kiosk?
@@ -102,7 +102,7 @@ const HelpSupport = () => {
             </AccordionSummary>
             <AccordionDetails>
               <Typography variant="body1" color="text.primary">
-                Here are the main reasons to use the TeleHealth Kiosk:
+                Here are the main reasons to use the Telehealth Kiosk:
               </Typography>
               <List disablePadding sx={{ mt: 1 }}>
                 {[
@@ -135,7 +135,7 @@ const HelpSupport = () => {
             </AccordionSummary>
             <AccordionDetails>
               <Typography variant="body1" color="text.primary">
-                Before your telehealth session, make sure to:
+                Before your Telehealth session, make sure to:
               </Typography>
               <List disablePadding sx={{ mt: 1 }}>
                 {[
@@ -173,7 +173,7 @@ const HelpSupport = () => {
                 {[
                   "• Press the 'Call for Help' button on the kiosk screen.",
                   "• Speak to on-site staff for assistance.",
-                  "• Call the TeleHealth Helpdesk at 1800 066 888.",
+                  "• Call the Telehealth Helpdesk at 1800 066 888.",
                 ].map((text, index) => (
                   <ListItem key={index} sx={{ alignItems: "flex-start", py: 0 }}>
                     <ListItemText
@@ -196,26 +196,6 @@ const HelpSupport = () => {
               mt: 4,
             }}
           >
-            <Button
-              variant="contained"
-              color="secondary"
-              fullWidth
-              onClick={() => {
-                // Logic to call for assistance
-              }}
-              sx={{ fontSize: 18, py: 2 }}
-            >
-              Call for Help
-            </Button>
-            <Button
-              variant="outlined"
-              color="primary"
-              fullWidth
-              onClick={() => navigate("/")}
-              sx={{ fontSize: 18, py: 2 }}
-            >
-              Back to Home
-            </Button>
           </Box>
         </Box>
       </Box>
