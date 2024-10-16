@@ -8,9 +8,7 @@ This project is a prototype for a TeleHealth Kiosk interface designed to provide
 Key Features
 ----------------------
 Appointment Scheduling: Users can select a healthcare practitioner, pick a date, and choose an available time slot for their appointment.
-
 Telehealth Session Access: Users can join telehealth sessions by entering their session code received via email.
-
 Help and Support: Users can access FAQs and request help through the support page.
 
 Technologies Used

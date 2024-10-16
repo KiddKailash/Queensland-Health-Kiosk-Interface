@@ -10,7 +10,7 @@ const ScheduleForm = () => {
     dob: "",
     date: "", // Field for date
     time: "",
-    email: "",
+    address: "", // Field for mailing address
     practitionerType: "", // Field for practitioner type
     comments: "", // Field for comments
   });
@@ -85,8 +85,8 @@ const ScheduleForm = () => {
     if (!appointmentData.time) {
       newErrors.time = "Please select a time slot";
     }
-    if (!appointmentData.email) {
-      newErrors.email = "Email is required";
+    if (!appointmentData.address) {
+      newErrors.address = "Mailing address is required";
     }
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
@@ -106,7 +106,7 @@ const ScheduleForm = () => {
     <Layout>
       <Box sx={{ width: "100%" }}>
         {isScheduled ? (
-          <BookingConfirmed />
+          <BookingConfirmed appointmentData={appointmentData} />
         ) : (
           <Box>
             <Typography
@@ -144,17 +144,17 @@ const ScheduleForm = () => {
                 helperText={errors.dob}
               />
 
+              {/* Mailing Address Input */}
               <TextField
-                label="Contact Email"
-                name="email"
-                type="email"
-                value={appointmentData.email}
-                onChange={(e) => handleChange("email", e.target.value)}
+                label="Mailing Address"
+                name="address"
+                value={appointmentData.address}
+                onChange={(e) => handleChange("address", e.target.value)}
                 fullWidth
                 required
                 margin="normal"
-                error={Boolean(errors.email)}
-                helperText={errors.email}
+                error={Boolean(errors.address)}
+                helperText={errors.address}
               />
 
               <Divider sx={{ marginTop: 2, marginBottom: 2 }} />
