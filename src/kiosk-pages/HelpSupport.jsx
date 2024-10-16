@@ -50,7 +50,7 @@ const HelpSupport = () => {
             </AccordionSummary>
             <AccordionDetails>
               <Typography variant="body1" color="text.primary">
-                The TeleHealth Kiosk lets rural residents access healthcare through video consultations, even without internet or a device. Just visit the kiosk to book or attend an appointment.
+                The TeleHealth Kiosk allows rural residents to access healthcare via video consultations. You do not need internet or a device—just visit the kiosk to book or join a telehealth session.
               </Typography>
             </AccordionDetails>
           </Accordion>
@@ -67,6 +67,9 @@ const HelpSupport = () => {
               </Typography>
             </AccordionSummary>
             <AccordionDetails>
+              <Typography variant="body1" color="text.primary">
+                Follow these steps to use the TeleHealth Kiosk:
+              </Typography>
               <List disablePadding sx={{ mt: 1 }}>
                 {[
                   "1. Follow the on-screen instructions at the kiosk.",
@@ -98,6 +101,9 @@ const HelpSupport = () => {
               </Typography>
             </AccordionSummary>
             <AccordionDetails>
+              <Typography variant="body1" color="text.primary">
+                Here are the main reasons to use the TeleHealth Kiosk:
+              </Typography>
               <List disablePadding sx={{ mt: 1 }}>
                 {[
                   "• No need for internet or a device at home.",
@@ -128,6 +134,9 @@ const HelpSupport = () => {
               </Typography>
             </AccordionSummary>
             <AccordionDetails>
+              <Typography variant="body1" color="text.primary">
+                Before your telehealth session, make sure to:
+              </Typography>
               <List disablePadding sx={{ mt: 1 }}>
                 {[
                   "• Write down any questions for your doctor.",
@@ -157,6 +166,9 @@ const HelpSupport = () => {
               </Typography>
             </AccordionSummary>
             <AccordionDetails>
+              <Typography variant="body1" color="text.primary">
+                If you need assistance, here are your options:
+              </Typography>
               <List disablePadding sx={{ mt: 1 }}>
                 {[
                   "• Press the 'Call for Help' button on the kiosk screen.",
@@ -184,6 +196,26 @@ const HelpSupport = () => {
               mt: 4,
             }}
           >
+            <Button
+              variant="contained"
+              color="secondary"
+              fullWidth
+              onClick={() => {
+                // Logic to call for assistance
+              }}
+              sx={{ fontSize: 18, py: 2 }}
+            >
+              Call for Help
+            </Button>
+            <Button
+              variant="outlined"
+              color="primary"
+              fullWidth
+              onClick={() => navigate("/")}
+              sx={{ fontSize: 18, py: 2 }}
+            >
+              Back to Home
+            </Button>
           </Box>
         </Box>
       </Box>
