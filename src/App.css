@@ -1,0 +1,126 @@
+/* App.css */
+#root {
+  margin: 0 auto;
+  padding: 0; /* Removed padding */
+  width: 100vw; /* Ensures it takes the full width of the viewport */
+  height: 100vh; /* Ensures it takes the full height of the viewport */
+  text-align: center;
+}
+
+.qld__abstract {
+  font-size: 1.125rem; /* Slightly larger than body text */
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.qld__caption {
+  font-size: 0.75rem;
+  color: #555; /* Softer color for captions */
+  line-height: 1.4;
+}
+
+/* Style for standard text links */
+a {
+  color: #005A9C;
+  text-decoration: underline;
+  font-weight: 400;
+}
+
+a:hover {
+  color: #003A70;
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #7B1F3D; /* Visited state in Queensland maroon */
+}
+
+/* No visited state link (optional) */
+.qld__text-link--no-visited {
+  color: #005A9C;
+  text-decoration: underline;
+}
+
+.qld__text-link--no-visited:visited {
+  color: #005A9C; /* Keeps color same after visit */
+}
+
+/* Ordered list styling */
+ol {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+}
+
+ol li {
+  margin-bottom: 0.5rem;
+}
+
+/* Unordered list styling */
+ul {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+}
+
+ul li {
+  margin-bottom: 0.5rem;
+}
+
+/* Definition list styling */
+dl {
+  margin: 1rem 0;
+}
+
+dt {
+  font-weight: 700;
+  margin-top: 0.5rem;
+}
+
+dd {
+  margin-left: 1rem;
+  margin-bottom: 0.5rem;
+} 
+
+/* App.css */
+body {
+  margin: 0; /* Reset margin */
+  padding: 0; /* Reset padding */
+  width: 100vw; /* Ensure body spans the full width */
+  height: 100vh; /* Ensure body spans the full height */
+  overflow-x: hidden; /* Prevent any horizontal scroll */
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
