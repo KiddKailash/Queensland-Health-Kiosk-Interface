@@ -37,136 +37,140 @@ const HelpSupport = () => {
             Help and Support
           </Typography>
 
-          {/* Section: What is Telehealth */}
+          {/* Section: What is the TeleHealth Kiosk */}
           <Accordion>
             <AccordionSummary
               expandIcon={<ExpandMore />}
-              aria-controls="telehealth-content"
-              id="telehealth-header"
+              aria-controls="telehealth-kiosk-content"
+              id="telehealth-kiosk-header"
             >
               <Typography variant="h5" color="primary">
-                What is Telehealth?
+                What is the TeleHealth Kiosk?
               </Typography>
             </AccordionSummary>
             <AccordionDetails>
               <Typography variant="body1" color="text.primary">
-                Telehealth is like a face-to-face appointment, but you will see
-                and hear your health professional via a video screen. It is a
-                convenient way to connect with healthcare professionals without
-                needing to travel.
+                The TeleHealth Kiosk lets rural residents access healthcare through video consultations, even without internet or a device. Just visit the kiosk to book or attend an appointment.
               </Typography>
             </AccordionDetails>
           </Accordion>
 
-          {/* Section: Why Choose Telehealth */}
-          <Accordion >
-            <AccordionSummary
-              expandIcon={<ExpandMore />}
-              aria-controls="why-telehealth-content"
-              id="why-telehealth-header"
-            >
-              <Typography variant="h5" color="primary">
-                Why Should I Choose Telehealth?
-              </Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              <List dense>
-                <ListItem>
-                  <ListItemText primary="Get care more easily without traveling far." />
-                </ListItem>
-                <ListItem>
-                  <ListItemText primary="Spend less time away from work or other activities." />
-                </ListItem>
-                <ListItem>
-                  <ListItemText primary="Keep your appointment if you're sick or need to isolate." />
-                </ListItem>
-                <ListItem>
-                  <ListItemText primary="Invite a family member or friend to join your appointment." />
-                </ListItem>
-              </List>
-              <Typography variant="body1" color="text.primary">
-                Telehealth appointments are secure, and your information is
-                safe.
-              </Typography>
-            </AccordionDetails>
-          </Accordion>
-
-          {/* Section: How to Use Telehealth */}
-          <Accordion >
+          {/* Section: How to Use the TeleHealth Kiosk */}
+          <Accordion>
             <AccordionSummary
               expandIcon={<ExpandMore />}
               aria-controls="how-to-use-content"
               id="how-to-use-header"
             >
               <Typography variant="h5" color="primary">
-                How to Use Telehealth
+                How Do I Use the Kiosk?
               </Typography>
             </AccordionSummary>
             <AccordionDetails>
-              <Typography variant="body1" color="text.primary" gutterBottom>
-                To use telehealth, you will need:
-              </Typography>
-              <List dense>
-                <ListItem>
-                  <ListItemText primary="A computer, tablet, or smartphone with a camera." />
-                </ListItem>
-                <ListItem>
-                  <ListItemText primary="Internet or Wi-Fi connection." />
-                </ListItem>
-                <ListItem>
-                  <ListItemText primary="A headset or speakers." />
-                </ListItem>
-              </List>
-              <Typography variant="body1" color="text.primary">
-                If you are at home, make sure your device is charged and you are
-                in a quiet, safe place. You can also test telehealth on your
-                device by making a test call to check if your video and sound
-                are working.
-              </Typography>
-            </AccordionDetails>
-          </Accordion>
-
-          {/* Section: How to Prepare for a Telehealth Appointment */}
-          <Accordion >
-            <AccordionSummary
-              expandIcon={<ExpandMore />}
-              aria-controls="prepare-content"
-              id="prepare-header"
-            >
-              <Typography variant="h5" color="primary">
-                How to Prepare for a Telehealth Appointment
-              </Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              <List dense>
-                <ListItem>
-                  <ListItemText primary="Have a list of your medicines or any test results with you." />
-                </ListItem>
-                <ListItem>
-                  <ListItemText primary="Write down any questions you want to ask during the appointment." />
-                </ListItem>
+              <List disablePadding sx={{ mt: 1 }}>
+                {[
+                  "1. Follow the on-screen instructions at the kiosk.",
+                  "2. Book an appointment or enter your session code to start.",
+                  "3. Be on time for your appointment.",
+                  "4. The system will connect you when your doctor is ready.",
+                  "5. Request an email summary after the session if needed.",
+                ].map((text, index) => (
+                  <ListItem key={index} sx={{ alignItems: "flex-start", py: 0 }}>
+                    <ListItemText
+                      primary={text}
+                      primaryTypographyProps={{ variant: "body1" }}
+                    />
+                  </ListItem>
+                ))}
               </List>
             </AccordionDetails>
           </Accordion>
 
-          {/* Section: Need Assistance */}
-          <Accordion >
+          {/* Section: Why Use the Kiosk? */}
+          <Accordion>
             <AccordionSummary
               expandIcon={<ExpandMore />}
-              aria-controls="assistance-content"
-              id="assistance-header"
+              aria-controls="why-telehealth-kiosk-content"
+              id="why-telehealth-kiosk-header"
             >
               <Typography variant="h5" color="primary">
-                Need Assistance?
+                Why Use the Kiosk?
               </Typography>
             </AccordionSummary>
             <AccordionDetails>
-              <Typography variant="body1" color="text.primary">
-                If you need assistance with telehealth, press the{" "}
-                <strong>Call for Help</strong> button below or contact the
-                Telehealth Helpdesk at <a href="tel:1800066888">1800 066 888</a>{" "}
-                for technical support.
+              <List disablePadding sx={{ mt: 1 }}>
+                {[
+                  "• No need for internet or a device at home.",
+                  "• Avoid long travel to healthcare providers.",
+                  "• Private, easy-to-use setup for consultations.",
+                  "• Ideal for routine check-ups or specialist appointments.",
+                ].map((text, index) => (
+                  <ListItem key={index} sx={{ alignItems: "flex-start", py: 0 }}>
+                    <ListItemText
+                      primary={text}
+                      primaryTypographyProps={{ variant: "body1" }}
+                    />
+                  </ListItem>
+                ))}
+              </List>
+            </AccordionDetails>
+          </Accordion>
+
+          {/* Section: Preparing for Your Appointment */}
+          <Accordion>
+            <AccordionSummary
+              expandIcon={<ExpandMore />}
+              aria-controls="prepare-appointment-content"
+              id="prepare-appointment-header"
+            >
+              <Typography variant="h5" color="primary">
+                How to Prepare for Your Appointment
               </Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <List disablePadding sx={{ mt: 1 }}>
+                {[
+                  "• Write down any questions for your doctor.",
+                  "• Bring a list of medications or test results.",
+                  "• Have your session code ready (emailed to you when booked).",
+                ].map((text, index) => (
+                  <ListItem key={index} sx={{ alignItems: "flex-start", py: 0 }}>
+                    <ListItemText
+                      primary={text}
+                      primaryTypographyProps={{ variant: "body1" }}
+                    />
+                  </ListItem>
+                ))}
+              </List>
+            </AccordionDetails>
+          </Accordion>
+
+          {/* Section: Getting Help */}
+          <Accordion>
+            <AccordionSummary
+              expandIcon={<ExpandMore />}
+              aria-controls="getting-help-content"
+              id="getting-help-header"
+            >
+              <Typography variant="h5" color="primary">
+                Need Help?
+              </Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <List disablePadding sx={{ mt: 1 }}>
+                {[
+                  "• Press the 'Call for Help' button on the kiosk screen.",
+                  "• Speak to on-site staff for assistance.",
+                  "• Call the TeleHealth Helpdesk at 1800 066 888.",
+                ].map((text, index) => (
+                  <ListItem key={index} sx={{ alignItems: "flex-start", py: 0 }}>
+                    <ListItemText
+                      primary={text}
+                      primaryTypographyProps={{ variant: "body1" }}
+                    />
+                  </ListItem>
+                ))}
+              </List>
             </AccordionDetails>
           </Accordion>
 
@@ -180,26 +184,6 @@ const HelpSupport = () => {
               mt: 4,
             }}
           >
-            <Button
-              variant="contained"
-              color="secondary"
-              fullWidth
-              onClick={() => {
-                // Logic to call for assistance
-              }}
-              sx={{ fontSize: 18, py: 2 }}
-            >
-              Call for Help
-            </Button>
-            <Button
-              variant="outlined"
-              color="primary"
-              fullWidth
-              onClick={() => navigate("/")}
-              sx={{ fontSize: 18, py: 2 }}
-            >
-              Back to Home
-            </Button>
           </Box>
         </Box>
       </Box>

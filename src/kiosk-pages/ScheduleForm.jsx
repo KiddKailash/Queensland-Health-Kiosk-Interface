@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, Typography, TextField, Box } from '@mui/material';
+import { Button, Typography, TextField, Box, Divider } from '@mui/material';
 import Layout from './Layout';
 import BookingConfirmed from './BookingConfirmed';
 import UserSelect from './UserSelect'; // Import the new dropdown component
@@ -67,10 +67,39 @@ const ScheduleForm = () => {
     }
   };
 
+  // Validate form before submission
+  const validateForm = () => {
+    let newErrors = {};
+    if (!appointmentData.name) {
+      newErrors.name = 'Full Name is required';
+    }
+    if (!appointmentData.dob) {
+      newErrors.dob = 'Date of Birth is required';
+    }
+    if (!appointmentData.practitionerType) {
+      newErrors.practitionerType = 'Please select a practitioner type';
+    }
+    if (!appointmentData.date) {
+      newErrors.date = 'Please select an appointment date';
+    }
+    if (!appointmentData.time) {
+      newErrors.time = 'Please select a time slot';
+    }
+    if (!appointmentData.email) {
+      newErrors.email = 'Email is required';
+    }
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
   const scheduleAppointment = (e) => {
     e.preventDefault();
-    // Validation logic here...
-    // Send appointmentData to backend
+
+    // Validate the form
+    if (validateForm()) {
+      // If validation passes, show the BookingConfirmed page
+      setIsScheduled(true);
+    }
   };
 
   return (
@@ -110,6 +139,21 @@ const ScheduleForm = () => {
                 helperText={errors.dob}
               />
 
+<TextField
+                label="Contact Email"
+                name="email"
+                type="email"
+                value={appointmentData.email}
+                onChange={(e) => handleChange('email', e.target.value)}
+                fullWidth
+                required
+                margin="normal"
+                error={Boolean(errors.email)}
+                helperText={errors.email}
+              />
+
+              <Divider sx={{marginTop: 2, marginBottom: 2}} />
+
               {/* Practitioner Type Selection using UserSelect */}
               <UserSelect
                 name="practitionerType"
@@ -117,7 +161,13 @@ const ScheduleForm = () => {
                 options={availablePractitioners}
                 value={appointmentData.practitionerType}
                 onChange={handlePractitionerChange}
+                error={Boolean(errors.practitionerType)}
               />
+              {errors.practitionerType && (
+                <Typography color="error" variant="body2">
+                  {errors.practitionerType}
+                </Typography>
+              )}
 
               {/* New Date Select Input - Disabled until a practitioner is selected */}
               <TextField
@@ -134,6 +184,11 @@ const ScheduleForm = () => {
                 error={Boolean(errors.date)}
                 helperText={errors.date}
               />
+              {errors.date && (
+                <Typography color="error" variant="body2">
+                  {errors.date}
+                </Typography>
+              )}
 
               {/* Available Times Dropdown using UserSelect */}
               {availableTimes.length > 0 && (
@@ -144,21 +199,14 @@ const ScheduleForm = () => {
                   value={appointmentData.time}
                   onChange={handleChange}
                   disabled={!appointmentData.date} // Disabled until appointment date is selected
+                  error={Boolean(errors.time)}
                 />
               )}
-
-              <TextField
-                label="Contact Email"
-                name="email"
-                type="email"
-                value={appointmentData.email}
-                onChange={(e) => handleChange('email', e.target.value)}
-                fullWidth
-                required
-                margin="normal"
-                error={Boolean(errors.email)}
-                helperText={errors.email}
-              />
+              {errors.time && (
+                <Typography color="error" variant="body2">
+                  {errors.time}
+                </Typography>
+              )}
 
               {/* Comments Input */}
               <TextField
