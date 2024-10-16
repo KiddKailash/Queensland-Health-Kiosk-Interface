@@ -1,11 +1,19 @@
-NOTE: For the AI Features, I have used my own personal API key. 
+TeleHealth Kiosk Interface
 
-GenAI Usage:
-- Generated the home-page/web-icon images
-- AI Assistant Features
-- QR Code download Feature
+Overview
+----------------------
+This project is a prototype for a TeleHealth Kiosk interface designed to provide rural residents with access to healthcare via video consultations. The kiosk allows users without internet or digital devices to book and attend telehealth appointments. Built with React and Material-UI, the interface is responsive and follows accessibility guidelines.
 
-Advanced Feature:
-- See: AiAssist Button on the Projects Page
-- This button asks for a simple user prompt, and creates a Project and Locations for that prompt.
-- The advanced feature component is named AiAssist.jsx
+
+Key Features
+----------------------
+Appointment Scheduling: Users can select a healthcare practitioner, pick a date, and choose an available time slot for their appointment.
+
+Telehealth Session Access: Users can join telehealth sessions by entering their session code received via email.
+
+Help and Support: Users can access FAQs and request help through the support page.
+
+Technologies Used
+----------------------
+React for building the UI.
+Material-UI (MUI) for responsive components.
