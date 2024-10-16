@@ -27,7 +27,7 @@ const HelpSupport = () => {
           padding: 2,
         }}
       >
-        <Box>
+        <Box sx={{ maxWidth: 800 }}>
           <Typography
             variant="h2"
             color="primary"
@@ -37,38 +37,73 @@ const HelpSupport = () => {
             Help and Support
           </Typography>
 
-          {/* Section: What is the Telehealth Kiosk */}
-          <Accordion>
+          {/* Section: What is the TeleHealth Kiosk */}
+          <Accordion
+            sx={{
+              marginBottom: 2,
+              border: "1px solid",
+              borderColor: "divider",
+              borderRadius: 1,
+              "&:before": {
+                display: "none",
+              },
+            }}
+          >
             <AccordionSummary
-              expandIcon={<ExpandMore />}
-              aria-controls="Telehealth-kiosk-content"
-              id="Telehealth-kiosk-header"
+              expandIcon={<ExpandMore sx={{ color: "#FFFFFF" }} />}
+              aria-controls="telehealth-kiosk-content"
+              id="telehealth-kiosk-header"
+              sx={{
+                backgroundColor: "primary.main",
+                color: "#FFFFFF",
+                "&.Mui-expanded": {
+                  backgroundColor: "primary.dark",
+                },
+              }}
             >
-              <Typography variant="h5" color="primary">
-                What is the Telehealth Kiosk?
+              <Typography variant="h5">
+                What is the TeleHealth Kiosk?
               </Typography>
             </AccordionSummary>
-            <AccordionDetails>
+            <AccordionDetails sx={{ backgroundColor: "#F9F9F9" }}>
               <Typography variant="body1" color="text.primary">
-                The Telehealth Kiosk allows rural residents to access healthcare via video consultations. You do not need internet or a device—just visit the kiosk to book or join a Telehealth session.
+                The TeleHealth Kiosk allows rural residents to access healthcare
+                via video consultations. You do not need internet or a
+                device—just visit the kiosk to book or join a telehealth
+                session.
               </Typography>
             </AccordionDetails>
           </Accordion>
 
-          {/* Section: How to Use the Telehealth Kiosk */}
-          <Accordion>
+          {/* Section: How to Use the TeleHealth Kiosk */}
+          <Accordion
+            sx={{
+              marginBottom: 2,
+              border: "1px solid",
+              borderColor: "divider",
+              borderRadius: 1,
+              "&:before": {
+                display: "none",
+              },
+            }}
+          >
             <AccordionSummary
-              expandIcon={<ExpandMore />}
+              expandIcon={<ExpandMore sx={{ color: "#FFFFFF" }} />}
               aria-controls="how-to-use-content"
               id="how-to-use-header"
+              sx={{
+                backgroundColor: "primary.main",
+                color: "#FFFFFF",
+                "&.Mui-expanded": {
+                  backgroundColor: "primary.dark",
+                },
+              }}
             >
-              <Typography variant="h5" color="primary">
-                How Do I Use the Kiosk?
-              </Typography>
+              <Typography variant="h5">How Do I Use the Kiosk?</Typography>
             </AccordionSummary>
-            <AccordionDetails>
+            <AccordionDetails sx={{ backgroundColor: "#F9F9F9" }}>
               <Typography variant="body1" color="text.primary">
-                Follow these steps to use the Telehealth Kiosk:
+                Follow these steps to use the TeleHealth Kiosk:
               </Typography>
               <List disablePadding sx={{ mt: 1 }}>
                 {[
@@ -78,7 +113,10 @@ const HelpSupport = () => {
                   "4. The system will connect you when your doctor is ready.",
                   "5. Request an email summary after the session if needed.",
                 ].map((text, index) => (
-                  <ListItem key={index} sx={{ alignItems: "flex-start", py: 0 }}>
+                  <ListItem
+                    key={index}
+                    sx={{ alignItems: "flex-start", py: 0 }}
+                  >
                     <ListItemText
                       primary={text}
                       primaryTypographyProps={{ variant: "body1" }}
@@ -90,19 +128,34 @@ const HelpSupport = () => {
           </Accordion>
 
           {/* Section: Why Use the Kiosk? */}
-          <Accordion>
+          <Accordion
+            sx={{
+              marginBottom: 2,
+              border: "1px solid",
+              borderColor: "divider",
+              borderRadius: 1,
+              "&:before": {
+                display: "none",
+              },
+            }}
+          >
             <AccordionSummary
-              expandIcon={<ExpandMore />}
-              aria-controls="why-Telehealth-kiosk-content"
-              id="why-Telehealth-kiosk-header"
+              expandIcon={<ExpandMore sx={{ color: "#FFFFFF" }} />}
+              aria-controls="why-use-kiosk-content"
+              id="why-use-kiosk-header"
+              sx={{
+                backgroundColor: "primary.main",
+                color: "#FFFFFF",
+                "&.Mui-expanded": {
+                  backgroundColor: "primary.dark",
+                },
+              }}
             >
-              <Typography variant="h5" color="primary">
-                Why Use the Kiosk?
-              </Typography>
+              <Typography variant="h5">Why Use the Kiosk?</Typography>
             </AccordionSummary>
-            <AccordionDetails>
+            <AccordionDetails sx={{ backgroundColor: "#F9F9F9" }}>
               <Typography variant="body1" color="text.primary">
-                Here are the main reasons to use the Telehealth Kiosk:
+                Here are the main reasons to use the TeleHealth Kiosk:
               </Typography>
               <List disablePadding sx={{ mt: 1 }}>
                 {[
@@ -111,7 +164,10 @@ const HelpSupport = () => {
                   "• Private, easy-to-use setup for consultations.",
                   "• Ideal for routine check-ups or specialist appointments.",
                 ].map((text, index) => (
-                  <ListItem key={index} sx={{ alignItems: "flex-start", py: 0 }}>
+                  <ListItem
+                    key={index}
+                    sx={{ alignItems: "flex-start", py: 0 }}
+                  >
                     <ListItemText
                       primary={text}
                       primaryTypographyProps={{ variant: "body1" }}
@@ -123,19 +179,36 @@ const HelpSupport = () => {
           </Accordion>
 
           {/* Section: Preparing for Your Appointment */}
-          <Accordion>
+          <Accordion
+            sx={{
+              marginBottom: 2,
+              border: "1px solid",
+              borderColor: "divider",
+              borderRadius: 1,
+              "&:before": {
+                display: "none",
+              },
+            }}
+          >
             <AccordionSummary
-              expandIcon={<ExpandMore />}
+              expandIcon={<ExpandMore sx={{ color: "#FFFFFF" }} />}
               aria-controls="prepare-appointment-content"
               id="prepare-appointment-header"
+              sx={{
+                backgroundColor: "primary.main",
+                color: "#FFFFFF",
+                "&.Mui-expanded": {
+                  backgroundColor: "primary.dark",
+                },
+              }}
             >
-              <Typography variant="h5" color="primary">
+              <Typography variant="h5">
                 How to Prepare for Your Appointment
               </Typography>
             </AccordionSummary>
-            <AccordionDetails>
+            <AccordionDetails sx={{ backgroundColor: "#F9F9F9" }}>
               <Typography variant="body1" color="text.primary">
-                Before your Telehealth session, make sure to:
+                Before your telehealth session, make sure to:
               </Typography>
               <List disablePadding sx={{ mt: 1 }}>
                 {[
@@ -143,7 +216,10 @@ const HelpSupport = () => {
                   "• Bring a list of medications or test results.",
                   "• Have your session code ready (emailed to you when booked).",
                 ].map((text, index) => (
-                  <ListItem key={index} sx={{ alignItems: "flex-start", py: 0 }}>
+                  <ListItem
+                    key={index}
+                    sx={{ alignItems: "flex-start", py: 0 }}
+                  >
                     <ListItemText
                       primary={text}
                       primaryTypographyProps={{ variant: "body1" }}
@@ -154,18 +230,33 @@ const HelpSupport = () => {
             </AccordionDetails>
           </Accordion>
 
-          {/* Section: Getting Help */}
-          <Accordion>
+          {/* Section: Need Help? */}
+          <Accordion
+            sx={{
+              marginBottom: 2,
+              border: "1px solid",
+              borderColor: "divider",
+              borderRadius: 1,
+              "&:before": {
+                display: "none",
+              },
+            }}
+          >
             <AccordionSummary
-              expandIcon={<ExpandMore />}
+              expandIcon={<ExpandMore sx={{ color: "#FFFFFF" }} />}
               aria-controls="getting-help-content"
               id="getting-help-header"
+              sx={{
+                backgroundColor: "primary.main",
+                color: "#FFFFFF",
+                "&.Mui-expanded": {
+                  backgroundColor: "primary.dark",
+                },
+              }}
             >
-              <Typography variant="h5" color="primary">
-                Need Help?
-              </Typography>
+              <Typography variant="h5">Need Help?</Typography>
             </AccordionSummary>
-            <AccordionDetails>
+            <AccordionDetails sx={{ backgroundColor: "#F9F9F9" }}>
               <Typography variant="body1" color="text.primary">
                 If you need assistance, here are your options:
               </Typography>
@@ -173,9 +264,12 @@ const HelpSupport = () => {
                 {[
                   "• Press the 'Call for Help' button on the kiosk screen.",
                   "• Speak to on-site staff for assistance.",
-                  "• Call the Telehealth Helpdesk at 1800 066 888.",
+                  "• Call the TeleHealth Helpdesk at 1800 066 888.",
                 ].map((text, index) => (
-                  <ListItem key={index} sx={{ alignItems: "flex-start", py: 0 }}>
+                  <ListItem
+                    key={index}
+                    sx={{ alignItems: "flex-start", py: 0 }}
+                  >
                     <ListItemText
                       primary={text}
                       primaryTypographyProps={{ variant: "body1" }}
@@ -185,18 +279,6 @@ const HelpSupport = () => {
               </List>
             </AccordionDetails>
           </Accordion>
-
-          {/* Action Buttons */}
-          <Box
-            sx={{
-              display: "flex",
-              flexDirection: { xs: "column", sm: "row" },
-              justifyContent: "space-between",
-              gap: 2,
-              mt: 4,
-            }}
-          >
-          </Box>
         </Box>
       </Box>
     </Layout>

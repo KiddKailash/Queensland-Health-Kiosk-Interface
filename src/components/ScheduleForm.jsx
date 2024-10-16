@@ -1,18 +1,18 @@
-import React, { useState } from 'react';
-import { Button, Typography, TextField, Box, Divider } from '@mui/material';
-import Layout from './Layout';
-import BookingConfirmed from './BookingConfirmed';
-import UserSelect from './UserSelect'; // Import the new dropdown component
+import React, { useState } from "react";
+import { Button, Typography, TextField, Box, Divider } from "@mui/material";
+import Layout from "./Layout";
+import BookingConfirmed from "./BookingConfirmed";
+import UserSelect from "./UserSelect"; // Import the new dropdown component
 
 const ScheduleForm = () => {
   const [appointmentData, setAppointmentData] = useState({
-    name: '',
-    dob: '',
-    date: '', // Field for date
-    time: '',
-    email: '',
-    practitionerType: '', // Field for practitioner type
-    comments: '', // Field for comments
+    name: "",
+    dob: "",
+    date: "", // Field for date
+    time: "",
+    email: "",
+    practitionerType: "", // Field for practitioner type
+    comments: "", // Field for comments
   });
 
   const [availableTimes, setAvailableTimes] = useState([]);
@@ -20,25 +20,25 @@ const ScheduleForm = () => {
   const [isScheduled, setIsScheduled] = useState(false);
 
   const availablePractitioners = [
-    { value: 'GP', label: 'General Practitioner' },
-    { value: 'Specialist', label: 'Specialist' },
-    { value: 'Psychologist', label: 'Psychologist' },
+    { value: "GP", label: "General Practitioner" },
+    { value: "Specialist", label: "Specialist" },
+    { value: "Psychologist", label: "Psychologist" },
   ];
 
   const availableSlots = {
     GP: [
-      { value: '10:00 AM', label: '10:00 AM' },
-      { value: '11:00 AM', label: '11:00 AM' },
-      { value: '2:00 PM', label: '2:00 PM' },
+      { value: "10:00 AM", label: "10:00 AM" },
+      { value: "11:00 AM", label: "11:00 AM" },
+      { value: "2:00 PM", label: "2:00 PM" },
     ],
     Specialist: [
-      { value: '12:00 PM', label: '12:00 PM' },
-      { value: '3:00 PM', label: '3:00 PM' },
+      { value: "12:00 PM", label: "12:00 PM" },
+      { value: "3:00 PM", label: "3:00 PM" },
     ],
     Psychologist: [
-      { value: '9:00 AM', label: '9:00 AM' },
-      { value: '1:00 PM', label: '1:00 PM' },
-      { value: '4:00 PM', label: '4:00 PM' },
+      { value: "9:00 AM", label: "9:00 AM" },
+      { value: "1:00 PM", label: "1:00 PM" },
+      { value: "4:00 PM", label: "4:00 PM" },
     ],
   };
 
@@ -47,8 +47,8 @@ const ScheduleForm = () => {
     setAppointmentData((prevData) => ({
       ...prevData,
       practitionerType: selectedValue,
-      date: '',  // Reset date when practitioner type changes
-      time: '',  // Reset time when practitioner type changes
+      date: "", // Reset date when practitioner type changes
+      time: "", // Reset time when practitioner type changes
     }));
     setAvailableTimes([]); // Reset available times when practitioner changes
   };
@@ -59,10 +59,10 @@ const ScheduleForm = () => {
       ...prevData,
       [name]: value,
     }));
-    setErrors((prevErrors) => ({ ...prevErrors, [name]: '' }));
+    setErrors((prevErrors) => ({ ...prevErrors, [name]: "" }));
 
     // If practitioner type and date are selected, populate available times
-    if (name === 'date' && appointmentData.practitionerType) {
+    if (name === "date" && appointmentData.practitionerType) {
       setAvailableTimes(availableSlots[appointmentData.practitionerType] || []);
     }
   };
@@ -71,22 +71,22 @@ const ScheduleForm = () => {
   const validateForm = () => {
     let newErrors = {};
     if (!appointmentData.name) {
-      newErrors.name = 'Full Name is required';
+      newErrors.name = "Full Name is required";
     }
     if (!appointmentData.dob) {
-      newErrors.dob = 'Date of Birth is required';
+      newErrors.dob = "Date of Birth is required";
     }
     if (!appointmentData.practitionerType) {
-      newErrors.practitionerType = 'Please select a practitioner type';
+      newErrors.practitionerType = "Please select a practitioner type";
     }
     if (!appointmentData.date) {
-      newErrors.date = 'Please select an appointment date';
+      newErrors.date = "Please select an appointment date";
     }
     if (!appointmentData.time) {
-      newErrors.time = 'Please select a time slot';
+      newErrors.time = "Please select a time slot";
     }
     if (!appointmentData.email) {
-      newErrors.email = 'Email is required';
+      newErrors.email = "Email is required";
     }
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
@@ -104,12 +104,17 @@ const ScheduleForm = () => {
 
   return (
     <Layout>
-      <Box sx={{ width: '100%' }}>
+      <Box sx={{ width: "100%" }}>
         {isScheduled ? (
           <BookingConfirmed />
         ) : (
           <Box>
-            <Typography variant="h4" color="primary" gutterBottom textAlign="center">
+            <Typography
+              variant="h4"
+              color="primary"
+              gutterBottom
+              textAlign="center"
+            >
               Schedule an Appointment
             </Typography>
             <form onSubmit={scheduleAppointment} noValidate>
@@ -117,7 +122,7 @@ const ScheduleForm = () => {
                 label="Full Name"
                 name="name"
                 value={appointmentData.name}
-                onChange={(e) => handleChange('name', e.target.value)}
+                onChange={(e) => handleChange("name", e.target.value)}
                 fullWidth
                 required
                 margin="normal"
@@ -130,7 +135,7 @@ const ScheduleForm = () => {
                 name="dob"
                 type="date"
                 value={appointmentData.dob}
-                onChange={(e) => handleChange('dob', e.target.value)}
+                onChange={(e) => handleChange("dob", e.target.value)}
                 fullWidth
                 required
                 margin="normal"
@@ -139,12 +144,12 @@ const ScheduleForm = () => {
                 helperText={errors.dob}
               />
 
-<TextField
+              <TextField
                 label="Contact Email"
                 name="email"
                 type="email"
                 value={appointmentData.email}
-                onChange={(e) => handleChange('email', e.target.value)}
+                onChange={(e) => handleChange("email", e.target.value)}
                 fullWidth
                 required
                 margin="normal"
@@ -152,7 +157,7 @@ const ScheduleForm = () => {
                 helperText={errors.email}
               />
 
-              <Divider sx={{marginTop: 2, marginBottom: 2}} />
+              <Divider sx={{ marginTop: 2, marginBottom: 2 }} />
 
               {/* Practitioner Type Selection using UserSelect */}
               <UserSelect
@@ -175,7 +180,7 @@ const ScheduleForm = () => {
                 name="date"
                 type="date"
                 value={appointmentData.date}
-                onChange={(e) => handleChange('date', e.target.value)}
+                onChange={(e) => handleChange("date", e.target.value)}
                 fullWidth
                 required
                 margin="normal"
@@ -191,17 +196,15 @@ const ScheduleForm = () => {
               )}
 
               {/* Available Times Dropdown using UserSelect */}
-              {availableTimes.length > 0 && (
-                <UserSelect
-                  name="time"
-                  text="Select Available Time"
-                  options={availableTimes}
-                  value={appointmentData.time}
-                  onChange={handleChange}
-                  disabled={!appointmentData.date} // Disabled until appointment date is selected
-                  error={Boolean(errors.time)}
-                />
-              )}
+              <UserSelect
+                name="time"
+                text="Select Available Time"
+                options={availableTimes}
+                value={appointmentData.time}
+                onChange={handleChange}
+                disabled={!appointmentData.date || !appointmentData.practitionerType || availableTimes.length === 0} // Ensure time input is disabled
+                error={Boolean(errors.time)}
+              />
               {errors.time && (
                 <Typography color="error" variant="body2">
                   {errors.time}
@@ -213,7 +216,7 @@ const ScheduleForm = () => {
                 label="Comments (Optional)"
                 name="comments"
                 value={appointmentData.comments}
-                onChange={(e) => handleChange('comments', e.target.value)}
+                onChange={(e) => handleChange("comments", e.target.value)}
                 fullWidth
                 margin="normal"
                 multiline
