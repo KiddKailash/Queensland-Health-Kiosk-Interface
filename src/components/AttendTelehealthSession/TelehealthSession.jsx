@@ -1,17 +1,17 @@
-import React, { useState } from 'react';
-import { Box, TextField, Button, Typography } from '@mui/material';
-import Layout from '../Layout';
-import ConfirmationPage from './WaitingPage';
+import React, { useState } from "react";
+import { Box, TextField, Button, Typography } from "@mui/material";
+import Layout from "../Layout";
+import ConfirmationPage from "./WaitingPage";
 
 const TelehealthSession = () => {
-  const [sessionCode, setSessionCode] = useState('');
+  const [sessionCode, setSessionCode] = useState("");
   const [isConnecting, setIsConnecting] = useState(false);
-  const [error, setError] = useState('');
+  const [error, setError] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!sessionCode) {
-      setError('Please enter your session code.');
+      setError("Please enter your session code.");
       return;
     }
     // Normally you would validate the code here
@@ -20,12 +20,17 @@ const TelehealthSession = () => {
 
   return (
     <Layout>
-      <Box sx={{ width: '100%' }}>
+      <Box sx={{ width: "100%" }}>
         {isConnecting ? (
           <ConfirmationPage />
         ) : (
           <Box>
-            <Typography variant="h4" color="primary" gutterBottom textAlign="center">
+            <Typography
+              variant="h4"
+              color="primary"
+              gutterBottom
+              textAlign="center"
+            >
               Enter Telehealth Session Code
             </Typography>
             <form onSubmit={handleSubmit} noValidate>
