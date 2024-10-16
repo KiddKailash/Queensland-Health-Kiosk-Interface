@@ -21,19 +21,15 @@ const HomePage = () => {
         <Typography variant="h1" color="primary" gutterBottom>
           Telehealth Kiosk
         </Typography>
-        <Typography variant="body1" gutterBottom color="text.primary" sx={{mb: 2}}>
+        <Typography
+          variant="body1"
+          gutterBottom
+          color="text.primary"
+          sx={{ mb: 2 }}
+        >
           Access healthcare services easily and conveniently.
         </Typography>
-        <Divider sx={{mb: 3, width: "80%", ml: "auto", mr: "auto"}}/>
-        <Button
-          variant="contained"
-          color="primary"
-          fullWidth
-          onClick={() => navigate("/telehealth-session")}
-          sx={{ mb: 2, fontSize: 18, py: 2 }}
-        >
-          Start Telehealth Session
-        </Button>
+        <Divider sx={{ mb: 3, width: "80%", ml: "auto", mr: "auto" }} />
         <Button
           variant="contained"
           color="primary"
@@ -43,6 +39,16 @@ const HomePage = () => {
         >
           Schedule an Appointment
         </Button>
+        <Button
+          variant="contained"
+          color="primary"
+          fullWidth
+          onClick={() => navigate("/telehealth-session")}
+          sx={{ mb: 2, fontSize: 18, py: 2 }}
+        >
+          Start Telehealth Session
+        </Button>
+
         <Button
           variant="outlined"
           color="primary"
