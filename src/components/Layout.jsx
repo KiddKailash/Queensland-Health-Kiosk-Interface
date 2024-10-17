@@ -25,7 +25,7 @@ const Layout = ({ children }) => (
         padding: 2,
       }}
     >
-      <Card sx={{ maxWidth: 550, width: "100%" }}>
+      <Card sx={{ maxWidth: 550, width: "100%"}}>
         <CardContent>{children}</CardContent>
       </Card>
     </Box>
