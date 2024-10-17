@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Box, TextField, Button, Typography } from "@mui/material";
-import Layout from "../Layout";
+import Layout from "../../components/Layout";
 import ConfirmationPage from "./WaitingPage";
 
 const TelehealthSession = () => {

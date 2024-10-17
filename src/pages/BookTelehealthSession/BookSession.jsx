@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Button, Typography, TextField, Box, Divider } from "@mui/material";
-import Layout from "../Layout";
+import Layout from "../../components/Layout";
 import BookingConfirmed from "./BookingConfirmed";
-import UserSelect from "../UserSelect";
+import UserSelect from "../../components/UserSelect";
 
 const ScheduleForm = () => {
   const [appointmentData, setAppointmentData] = useState({

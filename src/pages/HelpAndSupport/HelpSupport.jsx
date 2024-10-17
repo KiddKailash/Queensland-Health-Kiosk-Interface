@@ -1,6 +1,5 @@
 import React from "react";
 import {
-  Button,
   Typography,
   Box,
   List,
@@ -12,7 +11,7 @@ import {
 } from "@mui/material";
 import { ExpandMore } from "@mui/icons-material";
 import { useNavigate } from "react-router-dom";
-import Layout from "../Layout";
+import Layout from "../../components/Layout";
 
 const HelpSupport = () => {
   const navigate = useNavigate();

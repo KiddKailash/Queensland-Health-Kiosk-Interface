@@ -2,7 +2,7 @@
 import React from "react";
 import { Box, Typography, Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-import Layout from "../Layout";
+import Layout from "../../components/Layout";
 
 const PageNotFound = () => {
   const navigate = useNavigate();
