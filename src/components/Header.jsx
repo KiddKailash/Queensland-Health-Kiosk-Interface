@@ -43,7 +43,7 @@ const Header = () => {
           marginLeft: 4
         }}
       >
-        QGov Partnered | Telehealth Kiosk
+        *Health Provider Logo* | Telehealth Kiosk
       </Typography>
 
       {/* Conditionally display the Back button when not on the home page */}
