@@ -43,10 +43,6 @@ This repository contains the code for a Telehealth Kiosk Interface **Prototype**
 
 ### User Support
 - Navigate to the Help and Support page for detailed guidance on using the kiosk.
-- Press the "Call for Help" button for immediate assistance.
-
-### Theme Customization
-- Use the theme toggle button to switch between light and dark modes.
 
 ## Setup & Deployment
 
