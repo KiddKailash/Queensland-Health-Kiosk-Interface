@@ -1,4 +1,5 @@
 # Telehealth Kiosk Interface
+**Visit the site** @ https://qhealth-kiosk.netlify.app/ 
 
 This repository contains the code for a Telehealth Kiosk Interface **Prototype**, a platform designed to facilitate telehealth appointments and provide easy access to healthcare services in rural and remote areas. The kiosk interface is designed to be user-friendly and accessible, allowing patients to interact with healthcare providers through a streamlined and intuitive system.
 
